@@ -1,16 +1,16 @@
 /* Box Model Hack */
 * {
-     -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
@@ -20,17 +20,45 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
-
 body {
 
 }
 
-
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
+header p{
+  background-color: #334fb4;
+}
 
+header img{
+  width: 80px;
+  height: 80px;
+}
+
+header nav{
+  display: flex;
+  height: 15vh;
+  background-color: #3e54a3;
+}
+
+header a{
+  color: #dcd7d3;
+}
+
+header a:hover{
+  color: #ffffff;
+}
+
+header li{
+  display: inline;
+  list-style: none;
+}
+
+
+img {
+  width: 100px;
+  height: 100px;
 }
 
 footer {
