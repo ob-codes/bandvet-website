@@ -20,47 +20,138 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
-body {
+html{
+  font-size: 62.5%;
+}
 
+h1{
+  font-size: 3.6rem;
+}
+h2{
+  font-size: 3.6rem;
+}
+h3{
+  font-size: 2.4rem;
+}
+h4{
+  font-size: 2.1rem;
+}
+h5{
+  font-size: 1.8rem;
+}
+p{
+  font-size: 1.7rem;
+}
+button{
+  font-size: 1.7rem;
+}
+li{
+  font-size: 1.7rem;
+}
+
+body {
+  padding: 2vh 5%;
+  /* margin: 2vh 5%; */
+  background-color: #dcd7d3;
+}
+
+img {
+  /* max-width: 300px; */
+  /* max-height: 500px; */
+}
+
+button{
+  --color: hsl(208,72%, 39%);
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid var(--color);
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+
+  position: relative;
+  isolation: isolate;
+}
+button::after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-color: var(--color);
+  inset: 0;
+
+  scale: 0 1;
+  transform-origin: right;
+  transition: 450ms;
+}
+button:hover::after,
+button:focus-visible::after{
+  transform-origin: left;
+  scale: 1 1;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header p{
-  background-color: #334fb4;
+
+/*********************** header ***********************/
+header{
+  background-color: #e8eded;
 }
 
 header img{
-  width: 80px;
-  height: 80px;
+  max-width: 75px;
+  max-height: 75px;
 }
 
 header nav{
   display: flex;
-  height: 15vh;
-  background-color: #3e54a3;
+  align-items: center;
+  text-align: right;
 }
 
 header a{
-  color: #dcd7d3;
+  text-decoration: none;
+  color: black;
 }
-
 header a:hover{
-  color: #ffffff;
+  padding-bottom: 0.5em;
+  border-bottom: 3px solid gray;
 }
 
-header li{
-  display: inline;
-  list-style: none;
+header ul{  
+  flex-basis: 100%;
+  padding-right: 5%;
+}
+header nav ul li{
+  display: inline-block;
+  padding-left: 5%;
 }
 
-
-img {
-  width: 100px;
-  height: 100px;
+/*********************** main ***********************/
+main{
+  display: flex;
+  /* justify-content: space-between; */
+  height: 60vh;
+  background-color: #3da1b1;
+}
+.left,
+.right{
+  flex-basis: 50%;
 }
 
+.right img{
+}
+
+/*********************** features ***********************/
+.container-for-features{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/*********************** footer ***********************/
 footer {
 
 }
